@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 01</title>
+</head>
+<body>
+    <input type="text"id="a"placeholder="nhập số a">
+    <input type="text"id="b"placeholder="nhập số b">
+    <input type="button"value="kêt quả" onclick="tinh()">
+<script>
+
+    function tinh() {
+        let c;
+        let tatol=document.getElementById('a').value;
+        let num=document.getElementById('b').value;
+        if(tatol==""&&num==""){
+            alert('mời nhập dữ liệu');
+        }else if (tatol==0&&num==0){
+            alert('phương trình vô nghiệm');
+        }else if (tatol==0&&num!=0){
+            alert('phương trình vô ngiệm');
+        }else if (tatol!==0&&num==0){
+            alert('phương trình có ngiệm duy nhất x=0');
+        }else if (tatol!==0){
+            c=-num/tatol;
+            alert('nghiệm của phương trình= '+c);
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let stringArray = prompt('nhập kí tự vào đây để kiểm tra nguyên âm');
+    let newArr = stringArray.split('');
+    let NguyenAm = ['a','o','e','u','i'];
+    let count = 0;
+    for(let i = 0;i<newArr.length;i++){
+        for(let j = 0; j< NguyenAm.length;j++){
+            if(newArr[i]==NguyenAm[j]){
+                count++;
+            }
+        }
+    }
+    isNguyenAm(count)
+    function isNguyenAm(){
+        if(count == 0){
+            return false
+        }else{
+            alert('có '+ count + ' chữ cái nguyên âm trong chuỗi')
+        }
+    }
+
+
+</script>
+</body>
+</html>
